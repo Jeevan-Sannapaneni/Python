@@ -1,0 +1,31 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = [list(map(int, input().split())) for _ in range(n)]
+
+    ans = 0
+
+   
+    for col in range(n):
+        s = 0
+        i = 0
+        j = col
+        while i < n and j < n:
+            s += a[i][j]
+            i += 1
+            j += 1
+        ans = max(ans, s)
+
+    
+    for row in range(1, n):
+        s = 0
+        i = row
+        j = 0
+        while i < n and j < n:
+            s += a[i][j]
+            i += 1
+            j += 1
+        ans = max(ans, s)
+
+    print(ans)
