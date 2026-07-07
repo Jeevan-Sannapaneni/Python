@@ -1,0 +1,24 @@
+# Train Partner
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    r = n % 8
+
+    if r == 1:
+        print(str(n + 3) + "LB")
+    elif r == 2:
+        print(str(n + 3) + "MB")
+    elif r == 3:
+        print(str(n + 3) + "UB")
+    elif r == 4:
+        print(str(n - 3) + "LB")
+    elif r == 5:
+        print(str(n - 3) + "MB")
+    elif r == 6:
+        print(str(n - 3) + "UB")
+    elif r == 7:
+        print(str(n + 1) + "SU")
+    else:
+        print(str(n - 1) + "SL")
