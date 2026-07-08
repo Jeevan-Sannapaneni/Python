@@ -1,0 +1,24 @@
+
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    a.sort()
+
+    ans = 0
+    possible = True
+
+    for i in range(n):
+        if a[i] > i + 1:
+            possible = False
+            break
+
+        ans += (i + 1) - a[i]
+
+    if possible:
+        print(ans)
+    else:
+        print(-1)
