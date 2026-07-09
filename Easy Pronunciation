@@ -1,0 +1,21 @@
+t = int(input())
+
+vowels = "aeiou"
+
+for _ in range(t):
+    s = input().strip()
+
+    count = 0
+    easy = True
+
+    for ch in s:
+        if ch in vowels:
+            count = 0
+        else:
+            count += 1
+
+        if count >= 4:
+            easy = False
+            break
+
+    print("YES" if easy else "NO")
