@@ -1,0 +1,13 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    marks = list(map(int, input().split()))
+
+    passed = 0
+
+    for mark in marks:
+        if mark >= 40:
+            passed += 1
+
+    print(passed)
