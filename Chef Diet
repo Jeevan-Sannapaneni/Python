@@ -1,0 +1,23 @@
+
+
+t = int(input())
+
+for _ in range(t):
+    n, k = map(int, input().split())
+    arr = list(map(int, input().split()))
+
+    protein = 0
+    possible = True
+
+    for i in range(n):
+        protein += arr[i]
+
+        if protein >= k:
+            protein -= k
+        else:
+            print("NO", i + 1)
+            possible = False
+            break
+
+    if possible:
+        print("YES")
