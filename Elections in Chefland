@@ -1,0 +1,15 @@
+
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    votes = list(map(int, input().split()))
+
+    total = sum(votes)
+    mx = max(votes)
+
+    if mx > total // 2:
+        print("YES")
+    else:
+        print("NO")
