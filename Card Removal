@@ -1,0 +1,11 @@
+from collections import Counter
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    freq = Counter(arr)
+
+    print(n - max(freq.values()))
