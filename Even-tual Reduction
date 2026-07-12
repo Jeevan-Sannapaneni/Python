@@ -1,0 +1,18 @@
+from collections import Counter
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    s = input().strip()
+
+    freq = Counter(s)
+
+    possible = True
+
+    for value in freq.values():
+        if value % 2 != 0:
+            possible = False
+            break
+
+    print("YES" if possible else "NO")
