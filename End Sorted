@@ -1,0 +1,15 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    pos1 = arr.index(1)
+    posn = arr.index(n)
+
+    ans = pos1 + (n - 1 - posn)
+
+    if pos1 > posn:
+        ans -= 1
+
+    print(ans)
