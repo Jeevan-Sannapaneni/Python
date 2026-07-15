@@ -1,0 +1,14 @@
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    ans = 0
+
+    for x in arr:
+        # Apply the required condition
+        if x > 0:
+            ans += 1
+
+    print(ans)
