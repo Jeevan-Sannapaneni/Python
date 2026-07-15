@@ -1,0 +1,11 @@
+# Mask Policy
+
+t = int(input())
+
+for _ in range(t):
+    n, a, b = map(int, input().split())
+
+    if b >= (n - a):
+        print("YES")
+    else:
+        print("NO")
