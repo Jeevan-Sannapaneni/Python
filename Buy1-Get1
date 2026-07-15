@@ -1,5 +1,3 @@
-# Buy1-Get1
-
 t = int(input())
 
 for _ in range(t):
