@@ -1,0 +1,24 @@
+#Problem Definition
+
+#Three friends are standing at positions X, Y, and Z on a number line.
+
+#In one move, a friend can move by 1 unit.
+
+#Determine whether all three friends can be brought to the same position.
+
+#Print:
+
+#YES if possible.
+#NO otherwise.
+
+t = int(input())
+
+for _ in range(t):
+    x, y, z = map(int, input().split())
+
+    total = abs(x-y) + abs(y-z) + abs(z-x)
+
+    if total % 2 == 0:
+        print("YES")
+    else:
+        print("NO")
