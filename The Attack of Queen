@@ -1,0 +1,15 @@
+# The Attack of Queen ,Problem Definition :A queen is placed on an 8 × 8 chessboard. Find the number of squares the queen can attack from the given position.
+
+t = int(input())
+
+for _ in range(t):
+    r, c = map(int, input().split())
+
+    ans = 14
+
+    ans += min(r - 1, c - 1)
+    ans += min(r - 1, 8 - c)
+    ans += min(8 - r, c - 1)
+    ans += min(8 - r, 8 - c)
+
+    print(ans)
