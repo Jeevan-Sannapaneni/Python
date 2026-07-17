@@ -1,0 +1,8 @@
+# Covid and Theatre Tickets , Problem Definition : A theatre has N seats.Every alternate seat must remain empty for social distancing.Find the maximum number of people that can be seated.
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+
+    print((n + 1) // 2)
