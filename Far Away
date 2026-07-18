@@ -1,0 +1,14 @@
+# Far Away
+
+t = int(input())
+
+for _ in range(t):
+    n, m = map(int, input().split())
+    arr = list(map(int, input().split()))
+
+    ans = 0
+
+    for x in arr:
+        ans += max(abs(x - 1), abs(x - m))
+
+    print(ans)
