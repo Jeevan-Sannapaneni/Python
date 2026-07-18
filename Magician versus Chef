@@ -1,0 +1,18 @@
+# Magician versus Chef
+
+t = int(input())
+
+for _ in range(t):
+    x, k = map(int, input().split())
+
+    pos = x
+
+    for _ in range(k):
+        a, b = map(int, input().split())
+
+        if pos == a:
+            pos = b
+        elif pos == b:
+            pos = a
+
+    print(pos)
