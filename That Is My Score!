@@ -1,0 +1,16 @@
+# That Is My Score!
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+
+    best = [0] * 9
+
+    for _ in range(n):
+        p, s = map(int, input().split())
+
+        if 1 <= p <= 8:
+            best[p] = max(best[p], s)
+
+    print(sum(best))
