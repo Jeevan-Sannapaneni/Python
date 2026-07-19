@@ -1,0 +1,19 @@
+# Group Assignment
+
+from collections import Counter
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    freq = Counter(arr)
+
+    ok = True
+    for cnt in freq.values():
+        if cnt == 1:
+            ok = False
+            break
+
+    print("YES" if ok else "NO")
