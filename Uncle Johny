@@ -1,0 +1,14 @@
+# Uncle Johny
+
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    k = int(input())
+
+    fav = arr[k - 1]
+
+    arr.sort()
+
+    print(arr.index(fav) + 1)
